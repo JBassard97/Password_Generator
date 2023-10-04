@@ -3,7 +3,9 @@
 This repository contains the completed code for a Password Generator application! This app will ask the user various criteria about the password, and through JavaScript logic will give you a desirable result. 
 ## Features
 This project was quite frankly my first real dive into JavaScript, and uses the inputs given with window.prompt() and window.confirm() to manipulate arrays under the hood. Other methods I used are to concatenanate arrays, convert them to a string, and removing space/commas so the final password given is clean and usable! I also recommend watching along in the browser's console, as I've made it fun to watch the arrays grow with each user choice.  
-## Usage
+## Usage/Deployed Link
+The link to the deployed application is https://jbassard97.github.io/Password_Generator/
+
 When loading the page, you're presented with a styled box with some placeholder text in the center. Upon pressing the "Generate Password" button, a series of prompts will ask the user the following criteria:
 1. Password length
 2. Including lowercase characters
