@@ -61,6 +61,7 @@ var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var specialCharacters = [".", ":", ";", "*", "^", "$", "&", "%", "!", "?"];
 
+// Initializing empty dictionary to later choose characters from
 var characterDict = [];
 
 // Get references to the #generate element
@@ -85,6 +86,7 @@ function writePassword() {
     return;
   } else {
     var passwordLength = lengthChoice;
+    // console.log on every step in the function
     console.log("This password is " + lengthChoice + " characters long!");
   }
 
@@ -94,6 +96,7 @@ function writePassword() {
   );
   // TODO: HANDLING LOWERCASE CHOICE
   if (lowerChoice) {
+    // ... spread operator used to prevent arrays from being right next to each other
     characterDict = characterDict.concat(...lower);
     console.log("Current usable characters: " + characterDict);
   }
@@ -122,6 +125,7 @@ function writePassword() {
     characterDict.push(...specialCharacters);
     console.log("Current usable characters: " + characterDict);
   }
+  // Adding one character randomly at a time to the empty password array
   for (var i = 0; i <= passwordLength - 1; i++) {
     var randomIndex = Math.floor(Math.random() * characterDict.length);
     password.push(characterDict[randomIndex]);
@@ -130,11 +134,9 @@ function writePassword() {
   password = password.toString();
   // Cleans password string by removing commas
   password = password.replaceAll(",", "");
-  console.log(password);
-  // Removes placeholder text
+  console.log("Completed password: " + password);
+  // Replaces placeholder text with the completed password
   passwordText.setAttribute("placeholder", password);
-  
-  
 }
 
 // Add event listener to generate button
