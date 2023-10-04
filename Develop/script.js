@@ -80,8 +80,8 @@ function writePassword() {
     window.alert("A strong password needs to be at least 8 characters!");
     // Returns back at the beginning after scolding user for too short
     return;
-  } else if (lengthChoice > 20) {
-    window.alert("That's too long!");
+  } else if (lengthChoice > 128) {
+    window.alert("That's way too long!");
     return;
   } else {
     var passwordLength = lengthChoice;
@@ -133,6 +133,8 @@ function writePassword() {
   console.log(password);
   // Removes placeholder text
   passwordText.setAttribute("placeholder", password);
+  
+  
 }
 
 // Add event listener to generate button
